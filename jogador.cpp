@@ -25,8 +25,12 @@ void jogada(char tab[3][3],int t){
         cin >> l;
         cout << "Coluna: " << endl;
         cin >> c;
-        if(l>=0 || l<=2 || c>=0 || c<=2){
-            aux = 1;
+        if(l>=0 && l<=2 && c>=0 && c<=2){
+            if(tab[l][c]!=0){
+                cout << "Valor invalido, tente novamente" << endl;
+            }else{
+                aux = 1;                
+            }
         }else{
             cout << "Valor invalido, tente novamente" << endl;
         }
